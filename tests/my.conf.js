@@ -8,16 +8,18 @@ module.exports = function(config) {
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
     frameworks: ['jasmine'],
     // list of files / patterns to load in the browser
+    // 'ionic', 'starter.controllers', 'starter.services', 'ngMessages'
     files: [
       '../www/lib/angular/angular.js',
-      '../www/js/*.js',
+      '../www/lib/ionic/js/ionic.bundle.js',
+      '../www/lib/jquery/dist/jquery.js',
       '../www/lib/angular-animate/angular-animate.js',
-      '../www/lib/angular-messages/angular-messages.js',
       '../www/lib/angular-messages/angular-messages.js',
       '../www/lib/angular-mocks/angular-mocks.js',
       '../www/lib/angular-sanitize/angular-sanitize.js',
-      '../www/lib/angular-ui-router/angular-ui-router.js',
-      '../www/lib/angular-mocks/angular-mocks.js',
+      '../www/lib/angular-ui-router/release/angular-ui-router.js',
+      '../www/lib/ion.rangeSlider/js/ion.rangeSlider.js',
+      '../www/js/*.js',
       '**/*tests.js'
     ],
     // list of files to exclude
@@ -37,7 +39,8 @@ module.exports = function(config) {
     colors: true,
     // level of logging
     // possible values: config.LOG_DISABLE || config.LOG_ERROR || config.LOG_WARN || config.LOG_INFO || config.LOG_DEBUG
-    logLevel: config.LOG_INFO,
+    //logLevel: config.LOG_INFO,
+    logLevel: config.LOG_DEBUG,
     // enable / disable watching file and executing tests whenever any file changes
     autoWatch: true,
     // start these browsers

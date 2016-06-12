@@ -1,18 +1,31 @@
-// describe("ChatsCtrl", function () {
-//     var $scope, ctrl, Chats;
-//     beforeEach(module('ui.router'));
-//     beforeEach(module('starter.controllers'));
-//     beforeEach(function () {
-//         inject(function ($rootScope, $controller, _Chats) {	
-//             $scope = $rootScope.$new();
-//             Chats = _Chats;
-//             ctrl = $controller("ChatsCtrl", {
-//                 $scope: $scope
-//             });
-//         });
+'use strict';
+describe("Chats Conttroller", function () {
+    //var rootScope;
+  	var scope;
+  	//var Chats;
 
-//     });
-//     it("should have a $scope variable", function() {
-//         expect($scope).toBeDefined();
-//     });
-// });
+  	beforeEach(module('starter'));
+    //beforeEach(module('starter.services'));
+    //beforeEach(module('starter.controllers'));
+    //beforeEach(module('ui.router'));
+
+    beforeEach(inject(function ($rootScope) {
+      //rootScope = $rootScope;
+      scope = $rootScope.$new();
+    }));
+
+    beforeEach(inject(function ($controller) {
+      $controller('ChatsCtrl', {
+        $scope: scope
+      });
+    }));
+
+    // beforeEach(inject(function (_Chats_) {
+    //   Chats = _Chats_;
+    // }));
+
+    it("should have a $scope variable", function() {
+        expect(scope).toBeDefined();
+    });
+
+});

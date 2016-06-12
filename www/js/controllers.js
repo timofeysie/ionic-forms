@@ -3,25 +3,28 @@ angular.module('starter.controllers', [])
 .controller('DashCtrl', function($scope, $state, $rootScope, $ionicPopup) {
   $("#example_id").ionRangeSlider({
     type: "double",
-    min: 0,
-    max: 100,
-    from: 17,
-    to: 23,
+    min: 100000,
+    max: 10000000,
+    from: 1000000,
+    to: 1100000,
+    grid: true,
+    force_edges: true,
     drag_interval: true
   });
   var slider = $("#example_id").data("ionRangeSlider");
-    console.log('slider',slider);
+  slider.reset();
+  console.log('slider',slider);
 
   $scope.authorization = {
     username: 'guest',
     password : ''    
-  };  
+  };
   console.log('$scope.authorization.username',$scope.authorization.username);
   $scope.signIn = function(form) {
     if (form.$valid) {
       var guest = 'guest';
       var pass  = 'password';
-      if ($scope.authorization.username === guest 
+      if ($scope.authorization.username === guest
         && $scope.authorization.password === pass) {
         $rootScope.username = $scope.authorization.username;
         $state.go('tab.account');

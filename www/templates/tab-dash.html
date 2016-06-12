@@ -2,7 +2,7 @@
   <ion-content class="padding">
     <h2>Ionic Testing with Forms</h2>
     <p>
-    This is it baby! <a href="http://market.ionic.io/starters" target="_blank">Ionic Market</a>.
+    What a great place, the <a href="http://market.ionic.io/starters" target="_blank">Ionic Market</a>.
     </p>
         <h2 style="text-align: center;">Form validation example</h2><br/>
         <form name="authorizationForm" 
@@ -34,11 +34,12 @@
                 ng-maxlength="20" 
                 required>
             </label>
-            <div class="item range">
+            <div class="item range row">
               <i class="icon ion-social-usd">0</i>
               <input type="range" name="volume">
               <i class="icon ion-social-usd">10,000,000</i>
             </div>
+            <hr /><!-- ion.rangeSlider.js Overrides native input element -->
             <div class="item">
               <div class="padding">
                   <input type="text" id="example_id" 
@@ -47,7 +48,8 @@
             </div>
             <!-- Error Messages -->
             <div class="error-container last-error-container" 
-              ng-show="authorizationForm.password.$error && authorizationForm.$submitted" ng-messages="authorizationForm.password.$error">
+              ng-show="authorizationForm.password.$error && authorizationForm.$submitted" 
+              ng-messages="authorizationForm.password.$error">
                 <div ng-messages-include="error-list.html"></div> 
             </div>                      
           </div>     
