@@ -9790,4 +9790,11 @@ a.button {
   transition-duration: 0s; }
 
 .range {
-  padding-right: 120px !important; }
+  padding-right: 121px !important; }
+
+ion-scroll {
+  width: 100%;
+  height: 50%; }
+  ion-scroll .rangeSlider__div {
+    width: 300%;
+    height: 100px; }

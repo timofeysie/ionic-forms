@@ -7,9 +7,14 @@ angular.module('starter.controllers', [])
     max: 10000000,
     from: 1000000,
     to: 1100000,
+    step: 10000,
     grid: true,
+    grid_num: 100,
     force_edges: true,
-    drag_interval: true
+    drag_interval: true,
+    prettify_enabled: true,
+    prettify_separator: ",",
+    prefix: "$"
   });
   var slider = $("#example_id").data("ionRangeSlider");
   slider.reset();

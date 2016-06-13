@@ -2,7 +2,8 @@
   <ion-content class="padding">
     <h2>Ionic Testing with Forms</h2>
     <p>
-    What a great place, the <a href="http://market.ionic.io/starters" target="_blank">Ionic Market</a>.
+    What a great place, the <a href="http://market.ionic.io/starters" 
+      target="_blank">Ionic Market</a>.
     </p>
         <h2 style="text-align: center;">Form validation example</h2><br/>
         <form name="authorizationForm" 
@@ -39,12 +40,14 @@
               <input type="range" name="volume">
               <i class="icon ion-social-usd">10,000,000</i>
             </div>
-            <hr /><!-- ion.rangeSlider.js Overrides native input element -->
+            <!-- ion.rangeSlider.js Overrides native input element -->
             <div class="item">
-              <div class="padding">
+            <ion-scroll zooming="true" direction="x">
+              <div class="padding rangeSlider__div">
                   <input type="text" id="example_id" 
                     name="example_name" value="5" />
               </div>
+              </ion-scroll>
             </div>
             <!-- Error Messages -->
             <div class="error-container last-error-container" 
